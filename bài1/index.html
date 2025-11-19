@@ -1,47 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bài thơ</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <script src='main.js'></script>
 </head>
+
 <body>
-   <table border="1">
+ 
+    <table border="1">
         <thead>
-            <th>STT</th>
-            <th>Ho Ten</th>
-            <th>MSV</th>
-            <th>Ten Lop</th>
+            <tr>
+                <th>STT</th>
+                <th>Họ và tên</th>
+                <th>Mã sinh viên</th>
+                <th>Nhóm</th>
+            </tr>
         </thead>
+        <tr>
+            <td>1</td>
+            <td>Nhữ Tùng Lâm</td>
+            <td>001</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Nhữ Tùng Lâm</td>
+            <td>002</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Nhữ Tùng Lâm</td>
+            <td>003</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Nhữ Tùng Lâm</td>
+            <td>004</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td> Nhữ Tùng Lâm</td>
+            <td>005</td>
+            <td>1</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td colspan=4>tong so sinh vien=5</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <h2 class="table-title">Bảng thực hành gộp cột và gộp dòng</h2>
+
+    <table class="data-table" border="1">
+
+        <thead>
+            <tr>
+                <th rowspan="2">STT</th>
+                <th rowspan="2">Mã sinh viên</th>
+                <th colspan="2">Thông tin học tập</th>
+                <th rowspan="2">Nhóm</th>
+            </tr>
+            <tr>
+                <th>Lớp</th>
+                <th>Khoa</th>
+            </tr>
+        </thead>
+
         <tbody>
             <tr>
                 <td>1</td>
-                <td>Nhữ Tùng Lâm</td>
-                <td>74dctt2111</td>
-                <td>TT24</td>
+                <td>SV001</td>
+                <td>CNTT1</td>
+                <td rowspan="2">Công nghệ thông tin</td>
+                <td>1</td>
             </tr>
-            
             <tr>
                 <td>2</td>
-                <td>Nhữ Tùng Lâm</td>
-                <td>74dctt12344</td>
-                <td>TT24</td>
+                <td>SV002</td>
+                <td>CNTT2</td>
+                <td>1</td>
             </tr>
-
             <tr>
                 <td>3</td>
-                <td>Nguyễn Văn Minh</td>
-                <td>74dctt12345</td>
-                <td>TT24</td>
+                <td>SV003</td>
+                <td>QTKD1</td>
+                <td rowspan="2">Quản trị kinh doanh</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>SV004</td>
+                <td>QTKD2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td colspan="5"><b>Tổng số sinh viên: 4</b></td>
             </tr>
         </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="4">Tổng số 02 Sinh Viên</td>
-            </tr>
-        </tfoot>
-   </table>
-   <img id="anh" src="1.png" alt="ảnh bị lỗi" style="width: 400px; height: 400px;">
+    </table>
+
+    <form>
+        <fieldset>
+            <legend>Đăng nhập</legend>
+
+            <label for="username">Tên đăng nhập:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Đăng nhập">
+        </fieldset>
+    </form>
+
+    <head>
+        <title>Đăng ký tài khoản</title>
+    </head>
+
+    <h1>Đăng ký tài khoản!</h1>
+    <p>Nhập và lựa chọn thông tin đăng ký</p>
+
+    <form class="register-form">
+        <input type="text" id="firstname" name="firstname" placeholder="Tên">
+        <input type="text" id="lastname" name="lastname" placeholder="Họ đệm"><br><br>
+        <input type="text" id="email" name="email" placeholder="Địa chỉ Email">
+        <input type="text" id="phonenumber" name="phonenumber" placeholder="SĐT"><br><br>
+
+        <label>Chọn thành phố</label>
+        <select>
+            <option value="" disabled selected>Tỉnh</option>
+            <option value="Hanoi">Hà Nội</option>
+            <option value="Hanoi">Hải Dương</option>
+            <option value="Hanoi">Hải Phòng</option>
+            <option value="Hanoi">Hà Giang</option>
+            <option value="Hanoi">Quảng Ninh</option>
+            <option value="Hanoi">Hưng Yên</option>
+            <option value="Hanoi">Vĩnh Phúc</option>
+            <option value="Hanoi">Phú Thọ</option>
+            <option value="Hanoi">Nha Trang</option>
+        </select>
+        <br><br>
+
+        <textarea id="node" name="node" rows="10" cols="50" placeholder="Ghi chú"></textarea>
+        <br><br>
+
+        <input type="button" id="btndangki" name="dangky" value="Đăng ký">
+    </form>
+
+
 </body>
-</html>
+
+</html>>
